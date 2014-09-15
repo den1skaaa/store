@@ -1,7 +1,8 @@
 Store::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-match '/items',    to: 'items#items',    via: 'get'
+#match '/items',    to: 'items#items',    via: 'get'
+match ':controller(/:action(/:id(.:format)))',  via: [:get, :post]
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
