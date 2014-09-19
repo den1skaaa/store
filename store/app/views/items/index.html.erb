@@ -1,5 +1,5 @@
-<h1> Items </h1>
-
+<h1> Товари </h1>
+<body>
 <% if @items.empty? %>
 	<b> No items in store </b>
 <% else %>
@@ -22,10 +22,16 @@
 </tr>
 
 <% end %>
+</table>
 
-<table>
 <footer>
 <big>
    <li><%= link_to "Додати товар", new_item_path(:item), data: { confirm: "Додати?" } %></li>
   </big>
   </footer>
+
+
+<small>
+  <a> Дата: <%= Time.now %> <a>
+  </small>
+  </body>

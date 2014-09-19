@@ -11,6 +11,9 @@ class Item < ActiveRecord::Base
 	# Цим валідейтом оголошуємо що поля "name" та "description" не мають бути пустими.
 	validates :name, :description, presence: true
 
+
+	has_and_belongs_to_many :cart
+	
   belongs_to :category
 
 	 #Запишемо колбеки: це фуекції які викликаються після закінчення певної дії над моделью.

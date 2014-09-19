@@ -1,7 +1,9 @@
 Store::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  resources :items
+  resources :items do
+    get :upvote, on: :member
+  end
 
 #match ':controller(/:action(/:id(.:format)))',  via: [:get, :post]
   
